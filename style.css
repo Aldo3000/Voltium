@@ -149,7 +149,7 @@ Navbar
     padding: 8px;
   }
 }
-/* =========================
+/* =========================*/
    HERO / HEADER
 
 .hero {
@@ -236,9 +236,6 @@ Navbar
 .formulario fieldset {
   border: none;
 }
-
-
-
 .campo {
   margin-bottom: 1rem;
 }
@@ -265,8 +262,11 @@ Navbar
   width: 100%;
   text-align: center;
   border: none;
-  
+  margin-bottom: 1rem;
 }
 .boton:hover {
     cursor: pointer;
 }
+
+/*pruebasss*/
+
