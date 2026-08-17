@@ -1,40 +1,8 @@
-/* Paleta de colores del proyecto.
-   Uso: estas variables CSS se pueden combinar con Bootstrap
-   sobrescribiendo sus variables (ej. --bs-primary: var(--color-lime);)
-   o aplicándolas directamente en tus estilos personalizados
-   (ej. background-color: var(--color-dark);). Cárgalas después
-   del CSS de Bootstrap para que tengan prioridad. */
+/* ==================================================
+   VARIABLES DEL PROYECTO
+================================================== */
+
 :root {
-  --color-yellow: #E7FF23;
-  --color-black: #101010;
-  --color-dark: #161414;
-  --color-gray: #2F2E2E;
-  --color-white: #FCFCFC;
-}
-
-
-.archivo-regular {
-  font-family: "Archivo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:"wdth" 100;
-}
-.archivo-semibold {
-  font-family: "Archivo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal; 
-  font-variation-settings:"wdth" 100;
-}
-
-.bbh-bogle-regular {
-  font-family: "BBH Bogle", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
     --color-yellow: #E7FF23;
     --color-black: #101010;
     --color-dark: #161414;
@@ -42,9 +10,42 @@
     --color-white: #FCFCFC;
 }
 
+
+/* ==================================================
+   TIPOGRAFÍAS
+================================================== */
+
+.archivo-regular {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.archivo-semibold {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.bbh-bogle-regular {
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ==================================================
+   RESET / CONFIGURACIÓN GENERAL
+================================================== */
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -55,288 +56,19 @@ html {
 
 body {
     margin: 0;
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
-p{
-  font-family: "Archivo", sans-serif;
-}
-
-#productos{
-  background-color: var(--color-dark);
-  padding: 5rem;
+p {
+    font-family: "Archivo", sans-serif;
 }
 
 
-
-.carousel-item.active{
-  background-color: #161414;
-}
-
-.card{
-  border-style: none;
-  background-color: var(--color-dark);
-  max-width: 30rem;
-  margin: 10rem;
-}
-
-.card-body{
-  display: flex;
-  align-items: flex-start; 
-  justify-content: space-between;
-}
-
-
-.btn.btn-primary{
-  background-color: var(--color-yellow);
-  color: #161414;
-  border-style: none;
-  border-radius: 20rem;
-  padding: .8rem 2.5rem;
-  font-size: 1.5rem;
-  font-family:"Archivo", sans-serif; 
-
-}
-h2{
-  font-family: "BBH Bogle", sans-serif;
-  color: var(--color-white);
-  font-size: 7rem;
-  margin: 5rem;
-}
-
-.card-title{
-  font-family: "Archivo", sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  color: var(--color-white);
-}
-
-.card-text{
-  font-size: 1.8rem;
-  font-family: "Archivo", sans-serif;;
-  color: var(--color-yellow);
-}
-
-.card-img-top{
-  object-fit: cover;
-  margin-bottom: 5rem;
-  border-radius: 2rem;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--color-yellow);
-  border-radius: 50%;
-  opacity: 1;
-}
-
-.carousel-control-prev {
-  left: 15px;
-}
-
-.carousel-control-next {
-  right: 15px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
-}
-
-    background-color: var(--color-black);
-}
-
-
-/* 
-Navbar
-*/
-.floating-nav {
-  position: fixed;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  z-index: 1000;
-}
-
-.nav-box {
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.icon-img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-.nav-box.single {
-  padding: 10px;
-}
-
-
-.nav-box.pill {
-  padding: 12px 8px;
-  gap: 14px;
-}
-
-
-.nav-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: transform 0.2s ease;
-  text-decoration: none;
-}
-
-.nav-btn:hover {
-  transform: scale(1.08);
-}
-
-.cart-btn {
-  position: relative;
-}
-
-.badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background-color: var(--color-black);
-  color: var(--color-yellow);
-  font-size: 11px;
-  font-weight: bold;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-btn.glow {
-  background-color: var(--color-yellow);
-  color: var(--color-black);
-  box-shadow: 
-    0 0 10px rgba(212, 255, 42, 0.6),
-    0 0 20px rgba(212, 255, 42, 0.4);
-}
-
-.nav-btn.glow:hover {
-  box-shadow: 
-    0 0 15px rgba(212, 255, 42, 0.9),
-    0 0 30px rgba(212, 255, 42, 0.6);
-}
-
-.nav-btn.glow.icons-btn {
-  color: var(--color-black);
-}
-
-/* Mobile */
-@media (max-width: 48rem) {
-  .floating-nav {
-    position: fixed;
-    top: auto;
-    bottom: 20px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    flex-direction: row;
-    gap: 14px;
-  }
-
-  .nav-box {
-    flex-direction: row;
-  }
-
-  .nav-box.pill {
-    padding: 8px 12px;
-  }
-
-  .nav-box.single {
-    padding: 8px;
-  }
-}
-/* Footer*/
-.footer-custom {
-  background-color: var(--color-yellow);
-  color: var(--color-black);
-}
-
-.footer-logo {
-  max-height: 50px;
-}
-
-.footer-slogan {
-  font-size: 1.4rem;
-}
-
-.footer-link {
-  display: block;
-  color: var(--color-black);
-  text-decoration: none;
-  font-size: 1.3rem;
-  margin-bottom: 4px;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-.footer-divider {
-  border-top: 1px solid rgba(16, 16, 16, 0.2);
-  opacity: 1;
-}
-
-.social-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1.5px solid var(--color-black);
-  color: var(--color-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  text-decoration: none;
-}
-.social-icon-img {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-}
-
-.footer-copy {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-@media (max-width: 48rem) {
-  .footer-custom {
-    padding-bottom: 100px !important;
-  }
-}
-/* =========================*/
-   /* HERO / HEADER */
-
-/* =========================
+/* ==================================================
    HERO / HEADER
-*/
+================================================== */
+
 .hero {
     width: 100%;
     height: 70rem;
@@ -351,181 +83,356 @@ Navbar
     object-position: center;
 }
 
-/* Tablet */
-@media (max-width: 60rem) {
-    .hero {
-        height: 55rem;
-    }
-     h2 {
-        font-size: 5rem;
-        margin: 3rem;
-    }
 
-    .card {
-        max-width: 26rem;
-        margin: 3rem auto;
-    }
+/* ==================================================
+   NAVBAR FLOTANTE
+================================================== */
 
-    #productos {
-        padding: 3rem;
-    }
+.floating-nav {
+    position: fixed;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+
+    z-index: 1000;
+}
+
+.nav-box {
+    background-color: #1A1A1A;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.nav-box.single {
+    padding: 1rem;
+}
+
+.nav-box.pill {
+    padding: 1.2rem 0.8rem;
+    gap: 1.4rem;
+}
+
+.nav-btn {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.8rem;
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+}
+
+.icon-img {
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -0.4rem;
+    right: -0.4rem;
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-btn.glow {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+
+    box-shadow:
+        0 0 1rem rgba(212, 255, 42, 0.6),
+        0 0 2rem rgba(212, 255, 42, 0.4);
+}
+
+.nav-btn.glow:hover {
+    box-shadow:
+        0 0 1.5rem rgba(212, 255, 42, 0.9),
+        0 0 3rem rgba(212, 255, 42, 0.6);
 }
 
 
-/* Mobile */
-@media (max-width: 48rem) {
-    .hero {
-        height: 45rem;
-    }
-    h2 {
-        font-size: 3.5rem;
-        margin: 2rem;
-    }
+/* ==================================================
+   PRODUCTOS
+================================================== */
 
-    .card {
-        max-width: 100%;
-        margin: 2rem auto;
-    }
-
-    .card-title {
-        font-size: 1.6rem;
-    }
-
-    .card-text {
-        font-size: 1.5rem;
-    }
-
-    .btn.btn-primary {
-        padding: 0.8rem 2.5rem;
-        font-size: 1.2rem;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 32px;
-        height: 32px;
-    }
-
-    #productos {
-        padding: 2rem;
-    }
-
-}
+#catalogo {
+    background-color: var(--color-dark);
+    padding: 5rem;
 }
 
-/* Mobile */
-@media (max-width: 48rem) {
-    .hero {
-        height: 45rem;
-    }
+#catalogo > h2 {
+    margin: 5rem;
+
+    color: var(--color-white);
+
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 7rem;
 }
 
-/*Newslatter*/
-@media (min-width: 768px) {
-    .contenedor-news {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
-        column-gap: 1rem;
-
-    }
-
-    .contenedor-campos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
-        column-gap: 1.5rem;
-        margin-top: 1rem;
-
-    }
-
-    .campo:nth-child(3),
-    .campo:nth-child(4) {
-        grid-column: 1 / 3;
-
-    }
+.carousel-item.active {
+    background-color: var(--color-dark);
 }
+
+.card {
+    max-width: 30rem;
+    margin: 10rem auto;
+
+    border: none;
+    background-color: var(--color-dark);
+}
+
+.card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.card-title {
+    margin: 0;
+
+    color: var(--color-white);
+
+    font-family: "Archivo", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card-text {
+    margin-bottom: 0;
+
+    color: var(--color-yellow);
+
+    font-family: "Archivo", sans-serif;
+    font-size: 1.8rem;
+}
+
+.card-img-top {
+    object-fit: cover;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+}
+
+.btn.btn-primary {
+    flex-shrink: 0;
+
+    padding: 0.8rem 2.5rem;
+
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+
+    border: none;
+    border-radius: 20rem;
+
+    font-family: "Archivo", sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+
+/* ==================================================
+   CONTROLES DEL CARRUSEL
+================================================== */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4rem;
+    height: 4rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 1.5rem;
+}
+
+.carousel-control-next {
+    right: 1.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+}
+
+
+/* ==================================================
+   NEWSLETTER
+================================================== */
 
 .contenedor-news {
-    /* background-color: var(--color-gray);  */
     width: min(60rem, 100%);
-    /*Utiliza el valor mas pequeño*/
     margin: 0 auto;
     padding: 2rem;
+
     border-radius: 1rem;
 }
 
 .suscribe p {
-  color: var(--color-white);
-  font-family: Helvetica, sans-serif;
-  font-size: 1rem;
-  text-align: justify;
-  line-height: 1.5;
-  font-size: 1.2rem;
+    margin-bottom: 0;
 
+    color: var(--color-white);
+
+    font-family: "Archivo", sans-serif;
+    font-size: 1.2rem;
+
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .news-h2 {
-    font-size: 2rem;
-    font-family: Helvetica, sans-serif;
+    margin: 0 0 2rem;
+
     color: var(--color-yellow);
+
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .formulario fieldset {
     border: none;
+    padding: 0;
 }
+
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+}
+
 .campo {
     margin-bottom: 1rem;
 }
 
 .input-text {
     width: 100%;
-    border: none;
+
     padding: 1rem;
+
+    border: none;
     border-radius: 1.5rem;
+
     background-color: var(--color-dark);
     color: var(--color-white);
 
+    font-family: "Archivo", sans-serif;
+    font-size: 1.5rem;
+}
+
+.input-text::placeholder {
+    color: var(--color-gray);
 }
 
 .boton {
+    width: 100%;
+
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    border: none;
+    border-radius: 1.5rem;
+
     background-color: var(--color-yellow);
     color: var(--color-black);
-    padding: 1rem;
-    font-size: 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+
+    font-family: "Archivo", sans-serif;
+    font-size: 1.4rem;
     font-weight: bold;
-    border-radius: 1.5rem;
-    width: 100%;
-    text-align: center;
-    border: none;
-    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
 .boton:hover {
-    cursor: pointer;
+    box-shadow:
+        0 0 1rem rgba(231, 255, 35, 0.8),
+        0 0 3rem rgba(231, 255, 35, 0.5);
+
+    transform: translateY(-0.2rem);
 }
 
-/* =========================
+
+/* ==================================================
    PROMO BANNER
+================================================== */
 
 .promo-banner {
-    width: 100%;
     position: relative;
+
+    width: 100%;
+
     overflow: hidden;
 }
 
 .promo-banner__image {
     width: 100%;
     height: auto;
+
     display: block;
 }
 
 .promo-banner__button {
     position: absolute;
+
     right: 30rem;
     bottom: 20rem;
 
@@ -534,98 +441,33 @@ Navbar
     background-color: var(--color-yellow);
     color: var(--color-black);
 
+    border-radius: 3rem;
+
+    font-family: "Archivo", sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
+
     text-decoration: none;
 
-    border-radius: 3rem;
     cursor: pointer;
 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
 .promo-banner__button:hover {
-    box-shadow: 0 0 2rem rgba(231, 255, 35, 0.7);
+    box-shadow:
+        0 0 2rem rgba(231, 255, 35, 0.7),
+        0 0 3rem rgba(231, 255, 35, 0.4);
+
     transform: translateY(-0.2rem);
 }
 
-/* =========================
-   TABLET / LAPTOP PEQUEÑA
 
-@media (max-width: 75rem) {
-
-    .promo-banner__button {
-        right: 15rem;
-        bottom: 10rem;
-        padding: 1.4rem 2.8rem;
-    }
-}
-
-
-/* =========================
-   TABLET
-
-@media (max-width: 60rem) {
-
-    .promo-banner__button {
-        right: 8rem;
-        bottom: 6rem;
-        padding: 1.3rem 2.5rem;
-        font-size: 1.5rem;
-    }
-}
-
-
-/* =========================
-   MOBILE
-
-@media (max-width: 48rem) {
-
-    .promo-banner {
-        min-height: 30rem;
-    }
-
-    .promo-banner__image {
-        width: 100%;
-        height: 30rem;
-        object-fit: cover;
-        object-position: left center;
-    }
-
-    .promo-banner__button {
-        right: 3rem;
-        bottom: 3rem;
-        padding: 1.2rem 2rem;
-        font-size: 1.4rem;
-    }
-}
-
-
-/* =========================
-   MOBILE PEQUEÑO
-
-@media (max-width: 30rem) {
-
-    .promo-banner {
-        min-height: 26rem;
-    }
-
-    .promo-banner__image {
-        height: 26rem;
-        object-position: left center;
-    }
-
-    .promo-banner__button {
-        right: 2rem;
-        bottom: 2rem;
-        padding: 1rem 1.8rem;
-        font-size: 1.3rem;
-    }
-}
-
-
-/* =========================
+/* ==================================================
    PROMOTIONAL CARD
+================================================== */
 
 .promo-card {
     position: relative;
@@ -636,6 +478,7 @@ Navbar
     margin: 4rem auto;
 
     overflow: hidden;
+
     border-radius: 1.5rem;
 
     background-image: url("../img/fondopromo.png");
@@ -644,22 +487,15 @@ Navbar
     background-repeat: no-repeat;
 }
 
-
-/* =========================
-   CONTENT
-
 .promo-card__content {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
 
     padding: 3rem;
 }
-
-
-/* =========================
-   DISCOUNT
 
 .promo-card__discount {
     display: block;
@@ -671,12 +507,9 @@ Navbar
     font-family: "BBH Bogle", sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
+
     line-height: 1;
 }
-
-
-/* =========================
-   TITLE
 
 .promo-card__title {
     margin: 0 0 2rem;
@@ -686,12 +519,9 @@ Navbar
     font-family: "Archivo", sans-serif;
     font-size: 2rem;
     font-weight: 700;
+
     line-height: 1.2;
 }
-
-
-/* =========================
-   DESCRIPTION
 
 .promo-card__text {
     margin: 0;
@@ -701,12 +531,9 @@ Navbar
     font-family: "Archivo", sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
+
     line-height: 1.4;
 }
-
-
-/* =========================
-   PRODUCT
 
 .promo-card__product {
     position: absolute;
@@ -728,8 +555,75 @@ Navbar
 
 
 /* ==================================================
-   30rem+
-   Teléfonos grandes
+   FOOTER
+================================================== */
+
+.footer-custom {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.footer-logo {
+    max-height: 5rem;
+}
+
+.footer-slogan {
+    font-size: 1.4rem;
+}
+
+.footer-link {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: var(--color-black);
+
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(16, 16, 16, 0.2);
+    opacity: 1;
+}
+
+.social-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+
+    border: 1.5px solid var(--color-black);
+    border-radius: 50%;
+
+    color: var(--color-black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.social-icon-img {
+    width: 1.4rem;
+    height: 1.4rem;
+
+    object-fit: contain;
+}
+
+.footer-copy {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+
+/* ==================================================
+   RESPONSIVE — 30rem+
+   TELÉFONOS GRANDES
+================================================== */
 
 @media (min-width: 30rem) {
 
@@ -738,6 +632,7 @@ Navbar
         min-height: 27rem;
 
         margin: 5rem auto;
+
         border-radius: 1.8rem;
     }
 
@@ -767,8 +662,9 @@ Navbar
 
 
 /* ==================================================
-   45rem+
-   Tablets
+   RESPONSIVE — 45rem+
+   TABLET
+================================================== */
 
 @media (min-width: 45rem) {
 
@@ -777,7 +673,6 @@ Navbar
         min-height: 32rem;
 
         margin: 7rem 14rem 7rem 10rem;
-
         border-radius: 2rem;
     }
 
@@ -806,22 +701,163 @@ Navbar
         right: 0;
         bottom: -2.5rem;
     }
+
+    .contenedor-news {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+
+        column-gap: 1rem;
+    }
+
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+
+        column-gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .campo:nth-child(3) {
+        grid-column: 1 / 3;
+    }
 }
 
 
 /* ==================================================
-   60rem+
-   Desktop
+   RESPONSIVE — 48rem
+   TABLET / MOBILE
+================================================== */
+
+@media (max-width: 48rem) {
+
+    .floating-nav {
+        position: fixed;
+
+        top: auto;
+        bottom: 2rem;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        flex-direction: row;
+        gap: 1.4rem;
+    }
+
+    .nav-box {
+        flex-direction: row;
+    }
+
+    .nav-box.pill {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .nav-box.single {
+        padding: 0.8rem;
+    }
+
+    .footer-custom {
+        padding-bottom: 10rem !important;
+    }
+
+    .hero {
+        height: 45rem;
+    }
+
+    #catalogo {
+        padding: 2rem;
+    }
+
+    #catalogo > h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .btn.btn-primary {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .promo-banner {
+        min-height: 30rem;
+    }
+
+    .promo-banner__image {
+        width: 100%;
+        height: 30rem;
+
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .promo-banner__button {
+        right: 3rem;
+        bottom: 3rem;
+
+        padding: 1.2rem 2rem;
+
+        font-size: 1.4rem;
+    }
+
+    .promo-card__product {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVE — 60rem+
+   DESKTOP
+================================================== */
 
 @media (min-width: 60rem) {
+
+    .hero {
+        height: 70rem;
+    }
+
+    #catalogo {
+        padding: 5rem;
+    }
+
+    #catalogo > h2 {
+        font-size: 7rem;
+        margin: 5rem;
+    }
+
+    .card {
+        max-width: 30rem;
+        margin: 10rem auto;
+    }
 
     .promo-card {
         width: calc(100% - 24rem);
         max-width: 110rem;
         min-height: 38rem;
 
-        /*margin: 7rem auto;*/
         margin: 7rem 14rem 7rem 10rem;
+
         border-radius: 2rem;
     }
 
@@ -850,5 +886,66 @@ Navbar
         right: 0;
         bottom: -3rem;
     }
+
+    .promo-banner__button {
+        right: 30rem;
+        bottom: 20rem;
+    }
 }
-/*pruebasss*/
+
+
+/* ==================================================
+   PROMO BANNER — TABLET / LAPTOP
+================================================== */
+
+@media (min-width: 48.01rem) and (max-width: 75rem) {
+
+    .promo-banner__button {
+        right: 15rem;
+        bottom: 10rem;
+
+        padding: 1.4rem 2.8rem;
+    }
+}
+
+
+/* ==================================================
+   PROMO BANNER — TABLET
+================================================== */
+
+@media (min-width: 48.01rem) and (max-width: 60rem) {
+
+    .promo-banner__button {
+        right: 8rem;
+        bottom: 6rem;
+
+        padding: 1.3rem 2.5rem;
+
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ==================================================
+   PROMO BANNER — MOBILE PEQUEÑO
+================================================== */
+
+@media (max-width: 30rem) {
+
+    .promo-banner {
+        min-height: 26rem;
+    }
+
+    .promo-banner__image {
+        height: 26rem;
+    }
+
+    .promo-banner__button {
+        right: 2rem;
+        bottom: 2rem;
+
+        padding: 1rem 1.8rem;
+
+        font-size: 1.3rem;
+    }
+}
