@@ -216,7 +216,7 @@ Navbar
 }
 
 .suscribe p {
-  color: #FCFCFC;
+  color: var(--color-white);
   font-family: Helvetica, sans-serif;
   font-size: 1rem;
   text-align: justify;
