@@ -80,6 +80,7 @@ Navbar
   justify-content: center;
   font-size: 18px;
   transition: transform 0.2s ease;
+  text-decoration: none;
 }
 
 .nav-btn:hover {
