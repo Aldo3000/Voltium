@@ -1,0 +1,13 @@
+/* Paleta de colores del proyecto.
+   Uso: estas variables CSS se pueden combinar con Bootstrap
+   sobrescribiendo sus variables (ej. --bs-primary: var(--color-lime);)
+   o aplicándolas directamente en tus estilos personalizados
+   (ej. background-color: var(--color-dark);). Cárgalas después
+   del CSS de Bootstrap para que tengan prioridad. */
+:root {
+  --color-yellow: #E7FF23;
+  --color-black: #101010;
+  --color-dark: #161414;
+  --color-gray: #2F2E2E;
+  --color-white: #FCFCFC;
+}
