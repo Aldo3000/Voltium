@@ -5,6 +5,36 @@
    (ej. background-color: var(--color-dark);). Cárgalas después
    del CSS de Bootstrap para que tengan prioridad. */
 :root {
+  --color-yellow: #E7FF23;
+  --color-black: #101010;
+  --color-dark: #161414;
+  --color-gray: #2F2E2E;
+  --color-white: #FCFCFC;
+}
+
+
+.archivo-regular {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+.archivo-semibold {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal; 
+  font-variation-settings:"wdth" 100;
+}
+
+.bbh-bogle-regular {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
     --color-yellow: #E7FF23;
     --color-black: #101010;
     --color-dark: #161414;
@@ -25,6 +55,98 @@ html {
 
 body {
     margin: 0;
+}
+
+p{
+  font-family: "Archivo", sans-serif;
+}
+
+#productos{
+  background-color: var(--color-dark);
+  padding: 5rem;
+}
+
+
+
+.carousel-item.active{
+  background-color: #161414;
+}
+
+.card{
+  border-style: none;
+  background-color: var(--color-dark);
+  max-width: 30rem;
+  margin: 10rem;
+}
+
+.card-body{
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-between;
+}
+
+
+.btn.btn-primary{
+  background-color: var(--color-yellow);
+  color: #161414;
+  border-style: none;
+  border-radius: 20rem;
+  padding: .8rem 2.5rem;
+  font-size: 1.5rem;
+  font-family:"Archivo", sans-serif; 
+
+}
+h2{
+  font-family: "BBH Bogle", sans-serif;
+  color: var(--color-white);
+  font-size: 7rem;
+  margin: 5rem;
+}
+
+.card-title{
+  font-family: "Archivo", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.card-text{
+  font-size: 1.8rem;
+  font-family: "Archivo", sans-serif;;
+  color: var(--color-yellow);
+}
+
+.card-img-top{
+  object-fit: cover;
+  margin-bottom: 5rem;
+  border-radius: 2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+
     background-color: var(--color-black);
 }
 
@@ -234,6 +356,61 @@ Navbar
     .hero {
         height: 55rem;
     }
+     h2 {
+        font-size: 5rem;
+        margin: 3rem;
+    }
+
+    .card {
+        max-width: 26rem;
+        margin: 3rem auto;
+    }
+
+    #productos {
+        padding: 3rem;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 48rem) {
+    .hero {
+        height: 45rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+    .btn.btn-primary {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 32px;
+        height: 32px;
+    }
+
+    #productos {
+        padding: 2rem;
+    }
+
+}
 }
 
 /* Mobile */
@@ -334,7 +511,6 @@ Navbar
 
 /* =========================
    PROMO BANNER
-========================= */
 
 .promo-banner {
     width: 100%;
@@ -375,7 +551,6 @@ Navbar
 
 /* =========================
    TABLET / LAPTOP PEQUEÑA
-========================= */
 
 @media (max-width: 75rem) {
 
@@ -389,7 +564,6 @@ Navbar
 
 /* =========================
    TABLET
-========================= */
 
 @media (max-width: 60rem) {
 
@@ -404,7 +578,6 @@ Navbar
 
 /* =========================
    MOBILE
-========================= */
 
 @media (max-width: 48rem) {
 
@@ -430,7 +603,6 @@ Navbar
 
 /* =========================
    MOBILE PEQUEÑO
-========================= */
 
 @media (max-width: 30rem) {
 
@@ -454,7 +626,6 @@ Navbar
 
 /* =========================
    PROMOTIONAL CARD
-========================= */
 
 .promo-card {
     position: relative;
@@ -476,7 +647,6 @@ Navbar
 
 /* =========================
    CONTENT
-========================= */
 
 .promo-card__content {
     position: relative;
@@ -490,7 +660,6 @@ Navbar
 
 /* =========================
    DISCOUNT
-========================= */
 
 .promo-card__discount {
     display: block;
@@ -508,7 +677,6 @@ Navbar
 
 /* =========================
    TITLE
-========================= */
 
 .promo-card__title {
     margin: 0 0 2rem;
@@ -524,7 +692,6 @@ Navbar
 
 /* =========================
    DESCRIPTION
-========================= */
 
 .promo-card__text {
     margin: 0;
@@ -540,7 +707,6 @@ Navbar
 
 /* =========================
    PRODUCT
-========================= */
 
 .promo-card__product {
     position: absolute;
@@ -564,7 +730,6 @@ Navbar
 /* ==================================================
    30rem+
    Teléfonos grandes
-================================================== */
 
 @media (min-width: 30rem) {
 
@@ -604,7 +769,6 @@ Navbar
 /* ==================================================
    45rem+
    Tablets
-================================================== */
 
 @media (min-width: 45rem) {
 
@@ -648,7 +812,6 @@ Navbar
 /* ==================================================
    60rem+
    Desktop
-================================================== */
 
 @media (min-width: 60rem) {
 
