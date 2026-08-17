@@ -28,7 +28,128 @@ body {
   background-color: var(--color-black);
 }
 
-/* =========================
+
+/* 
+Navbar
+*/
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  z-index: 1000;
+}
+
+.nav-box {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icon-img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.nav-box.single {
+  padding: 10px;
+}
+
+
+.nav-box.pill {
+  padding: 12px 8px;
+  gap: 14px;
+}
+
+
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.08);
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-black);
+  color: var(--color-yellow);
+  font-size: 11px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn.glow {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  box-shadow: 
+    0 0 10px rgba(212, 255, 42, 0.6),
+    0 0 20px rgba(212, 255, 42, 0.4);
+}
+
+.nav-btn.glow:hover {
+  box-shadow: 
+    0 0 15px rgba(212, 255, 42, 0.9),
+    0 0 30px rgba(212, 255, 42, 0.6);
+}
+
+.nav-btn.glow.icons-btn {
+  color: var(--color-black);
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .floating-nav {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .nav-box {
+    flex-direction: row;
+  }
+
+  .nav-box.pill {
+    padding: 8px 12px;
+  }
+
+  .nav-box.single {
+    padding: 8px;
+  }
+}
+/* =========================*/
    HERO / HEADER
 
 .hero {
