@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=BBH+Bogle&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/logoIcon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <nav class="floating-nav">
+        <div class="nav-box single">
+            <button class="nav-btn cart-btn glow">
+                <img src="/img/cart-fill.svg" class="icon-img" alt="Logo">
+                <span class="badge">3</span>
+            </button>
+        </div>
+        <div class="nav-box pill">
+            <a href="#inicio" class="nav-btn glow">
+                <img src="/img/logoIcon.png" class="icon-img" alt="Inicio">
+            </a>
+            <a href="#catalogo" class="nav-btn glow">
+                <img src="/img/Vector.png" class="icon-img" alt="Catálogo">
+            </a>
+            <a href="#newsletters" class="nav-btn glow icons-btn">
+                <img src="/img/envelope-fill.svg" class="icon-img" alt="Suscríbete">
+            </a>
+        </div>
+
+    </nav>
+
     <header class="hero" id="inicio">
         <img class="hero__image" src="img/Image20260817133824.jpg"
             alt="Promoción de tenis deportivos Adidas Ultraboost con 15% de descuento">
@@ -129,5 +156,127 @@
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <main>
+
+
+        <section class="promo-banner">
+            <img class="promo-banner__image" src="img/bannerCTA.png" alt="Promoción de tenis deportivos">
+
+            <a class="promo-banner__button" href="#">
+                Comprar ahora
+            </a>
+        </section>
+
+        <section class="promo-card">
+
+            <div class="promo-card__content">
+                <span class="promo-card__discount">15% OFF</span>
+
+                <h2 class="promo-card__title">
+                    ULTRABOOST RUN
+                </h2>
+
+                <p class="promo-card__text">
+                    Código exclusivo en tienda<br>
+                    física y digital.
+                </p>
+            </div>
+
+            <div class="promo-card__product">
+                <img src="img/tenisalcuadrado.png" alt="Tenis Adidas Ultraboost Run">
+            </div>
+
+        </section>
+        <!-- NEWSLETTERS -->
+        <section id="newsletters">
+            <div class="contenedor-news">
+                <div class="suscribe">
+                    <h2 class="news-h2">Subscribe newsletters</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, commodi! Reiciendis nisi esse cum
+                        unde
+                        perferendis, ex, est similique sequi magni, placeat consequuntur natus eum autem provident
+                        accusamus
+                        neque at?</p>
+                </div>
+                <form class="formulario" id="forms-news">
+                    <fieldset>
+                        <!-- <legend>Contactanos llenando todos los campos</legend> -->
+
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <input class="input-text" type="text" name="" id="" placeholder="Nombre">
+                            </div>
+                            <div class="campo">
+                                <input class="input-text" type="text" placeholder="Ciudad">
+                            </div>
+                            <div class="campo">
+
+                                <input class="input-text" type="email" placeholder="Correo electrónico">
+                            </div>
+
+                        </div>
+                        <div id="liveAlertPlaceholder">
+                            <!-- <input id="liveAlertBtn" class="boton" type="submit" name=""  value="Enviar"> -->
+                            <button type="button" class="boton" id="liveAlertBtn">Enviar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+
+        <footer class="footer-custom py-5">
+            <div class="container">
+                <div class="row gy-4 text-center text-md-start">
+                    <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start">
+                        <img src="/img/logoIcon.png" alt="Logo de la empresa" class="footer-logo mb-2">
+                        <p class="mb-0 footer-slogan">Slogan</p>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <p class="fw-bold mb-1">+1 (7635) 547-12-97</p>
+                        <p class="fw-bold mb-0">SOPORTE@VOLTIUM.COM</p>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#inicio" class="footer-link fw-bold">INICIO</a></li>
+                            <li><a href="#catalogo" class="footer-link fw-bold">CATÁLOGO</a></li>
+                            <li><a href="#newsletters" class="footer-link fw-bold">SUSCRIBETE</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <hr class="my-4 footer-divider">
+
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-start">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon">
+                                <img src="/img/facebook.svg" alt="Facebook" class="social-icon-img">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="/img/tiktok.svg" alt="TikTok" class="social-icon-img">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="/img/twitter-x.svg" alt="Twitter" class="social-icon-img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-md-end">
+                        <p class="mb-0 footer-copy">© 2026 Voltium. Todos los derechos reservados</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
