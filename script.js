@@ -14,6 +14,7 @@ const appendAlert = (message, type) => {
 const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
-    appendAlert('Excelente, gracias por tu confianza!', 'success')
+    appendAlert('Excelente, gracias por tu confianza!', 'light')
+    document.getElementById("forms-news").reset();
   })
 }
