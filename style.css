@@ -278,12 +278,12 @@ Navbar
 }
 
 .suscribe p {
-    color: #FCFCFC;
-    font-family: Helvetica, sans-serif;
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 1.5;
-    font-size: 1.2rem;
+  color: var(--color-white);
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 1.2rem;
 
 }
 
