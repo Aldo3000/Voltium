@@ -5,27 +5,27 @@
    (ej. background-color: var(--color-dark);). Cárgalas después
    del CSS de Bootstrap para que tengan prioridad. */
 :root {
-  --color-yellow: #E7FF23;
-  --color-black: #101010;
-  --color-dark: #161414;
-  --color-gray: #2F2E2E;
-  --color-white: #FCFCFC;
+    --color-yellow: #E7FF23;
+    --color-black: #101010;
+    --color-dark: #161414;
+    --color-gray: #2F2E2E;
+    --color-white: #FCFCFC;
 }
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  background-color: var(--color-black);
+    margin: 0;
+    background-color: var(--color-black);
 }
 
 
@@ -149,9 +149,10 @@ Navbar
     padding: 8px;
   }
 }
-/* =========================*/
+/* =========================
    HERO / HEADER
-
+========================
+*/
 .hero {
     width: 100%;
     height: 70rem;
@@ -168,105 +169,461 @@ Navbar
 
 /* Tablet */
 @media (max-width: 60rem) {
-  .hero {
-    height: 55rem;
-  }
+    .hero {
+        height: 55rem;
+    }
 }
 
 /* Mobile */
 @media (max-width: 48rem) {
-  .hero {
-    height: 45rem;
-  }
+    .hero {
+        height: 45rem;
+    }
 }
 
 /*Newslatter*/
 @media (min-width: 768px) {
-  .contenedor-news {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    column-gap: 1rem;
+    .contenedor-news {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 1rem;
 
-  }
+    }
 
-  .contenedor-campos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    column-gap: 1.5rem;
-    margin-top: 1rem;
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 1.5rem;
+        margin-top: 1rem;
 
-  }
+    }
 
-  .campo:nth-child(3),
-  .campo:nth-child(4) {
-    grid-column: 1 / 3;
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
 
-  }
+    }
 }
 
 .contenedor-news {
-   /* background-color: var(--color-gray);  */
-  width: min(60rem, 100%);
-  /*Utiliza el valor mas pequeño*/
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 1rem;
+    /* background-color: var(--color-gray);  */
+    width: min(60rem, 100%);
+    /*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .suscribe p {
-  color: #FCFCFC;
-  font-family: Helvetica, sans-serif;
-  font-size: 1rem;
-  text-align: justify;
-  line-height: 1.5;
-  font-size: 1.2rem;
+    color: #FCFCFC;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.2rem;
 
 }
 
 .news-h2 {
-  font-size: 2rem;
-  font-family: Helvetica, sans-serif;
-  color: var(--color-yellow);
-  text-transform: uppercase;
-  font-weight: bold;
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .formulario fieldset {
-  border: none;
+    border: none;
 }
 .campo {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .input-text {
-  width: 100%;
-  border: none;
-  padding: 1rem;
-  border-radius: 1.5rem;
-  background-color: var(--color-dark);
-  color: var(--color-white);
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
 
 }
 
 .boton {
-  background-color: var(--color-yellow);
-  color: var(--color-black);
-  padding: 1rem;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 1.5rem;
-  width: 100%;
-  text-align: center;
-  border: none;
-  margin-bottom: 1rem;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin-bottom: 1rem;
 }
+
 .boton:hover {
     cursor: pointer;
 }
 
-/*pruebasss*/
+/* =========================
+   PROMO BANNER
+========================= */
 
+.promo-banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.promo-banner__button {
+    position: absolute;
+    right: 30rem;
+    bottom: 20rem;
+
+    padding: 1.5rem 3rem;
+
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    border-radius: 3rem;
+    cursor: pointer;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.promo-banner__button:hover {
+    box-shadow: 0 0 2rem rgba(231, 255, 35, 0.7);
+    transform: translateY(-0.2rem);
+}
+
+/* =========================
+   TABLET / LAPTOP PEQUEÑA
+========================= */
+
+@media (max-width: 75rem) {
+
+    .promo-banner__button {
+        right: 15rem;
+        bottom: 10rem;
+        padding: 1.4rem 2.8rem;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 60rem) {
+
+    .promo-banner__button {
+        right: 8rem;
+        bottom: 6rem;
+        padding: 1.3rem 2.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 48rem) {
+
+    .promo-banner {
+        min-height: 30rem;
+    }
+
+    .promo-banner__image {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .promo-banner__button {
+        right: 3rem;
+        bottom: 3rem;
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+/* =========================
+   MOBILE PEQUEÑO
+========================= */
+
+@media (max-width: 30rem) {
+
+    .promo-banner {
+        min-height: 26rem;
+    }
+
+    .promo-banner__image {
+        height: 26rem;
+        object-position: left center;
+    }
+
+    .promo-banner__button {
+        right: 2rem;
+        bottom: 2rem;
+        padding: 1rem 1.8rem;
+        font-size: 1.3rem;
+    }
+}
+
+
+/* =========================
+   PROMOTIONAL CARD
+========================= */
+
+.promo-card {
+    position: relative;
+
+    width: calc(100% - 3rem);
+    min-height: 24rem;
+
+    margin: 4rem auto;
+
+    overflow: hidden;
+    border-radius: 1.5rem;
+
+    background-image: url("../img/fondopromo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.promo-card__content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 3rem;
+}
+
+
+/* =========================
+   DISCOUNT
+========================= */
+
+.promo-card__discount {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-yellow);
+
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.promo-card__title {
+    margin: 0 0 2rem;
+
+    color: var(--color-white);
+
+    font-family: "Archivo", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.promo-card__text {
+    margin: 0;
+
+    color: var(--color-white);
+
+    font-family: "Archivo", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   PRODUCT
+========================= */
+
+.promo-card__product {
+    position: absolute;
+
+    right: 0;
+    bottom: -2rem;
+
+    width: 48%;
+
+    z-index: 1;
+}
+
+.promo-card__product img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==================================================
+   30rem+
+   Teléfonos grandes
+================================================== */
+
+@media (min-width: 30rem) {
+
+    .promo-card {
+        width: calc(100% - 4rem);
+        min-height: 27rem;
+
+        margin: 5rem auto;
+        border-radius: 1.8rem;
+    }
+
+    .promo-card__content {
+        padding: 3.5rem;
+    }
+
+    .promo-card__discount {
+        font-size: 4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .promo-card__title {
+        font-size: 2.3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .promo-card__text {
+        font-size: 1.7rem;
+    }
+
+    .promo-card__product {
+        width: 48%;
+        bottom: -2rem;
+    }
+}
+
+
+/* ==================================================
+   45rem+
+   Tablets
+================================================== */
+
+@media (min-width: 45rem) {
+
+    .promo-card {
+        width: calc(100% - 14rem);
+        min-height: 32rem;
+
+        margin: 7rem 14rem 7rem 10rem;
+
+        border-radius: 2rem;
+    }
+
+    .promo-card__content {
+        width: 55%;
+        padding: 4rem;
+    }
+
+    .promo-card__discount {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .promo-card__title {
+        font-size: 2.7rem;
+        margin-bottom: 3rem;
+    }
+
+    .promo-card__text {
+        font-size: 1.9rem;
+        line-height: 1.5;
+    }
+
+    .promo-card__product {
+        width: 48%;
+        right: 0;
+        bottom: -2.5rem;
+    }
+}
+
+
+/* ==================================================
+   60rem+
+   Desktop
+================================================== */
+
+@media (min-width: 60rem) {
+
+    .promo-card {
+        width: calc(100% - 24rem);
+        max-width: 110rem;
+        min-height: 38rem;
+
+        /*margin: 7rem auto;*/
+        margin: 7rem 14rem 7rem 10rem;
+        border-radius: 2rem;
+    }
+
+    .promo-card__content {
+        width: 55%;
+        padding: 5rem;
+    }
+
+    .promo-card__discount {
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .promo-card__title {
+        font-size: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .promo-card__text {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .promo-card__product {
+        width: 50%;
+        right: 0;
+        bottom: -3rem;
+    }
+}
+/*pruebasss*/
