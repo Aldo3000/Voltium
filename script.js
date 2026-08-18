@@ -159,7 +159,7 @@ function actualizarCarrito() {
                 class="cart-item__remove"
                 onclick="eliminarProducto('${producto.id}')"
             >
-                Eliminar
+                <img src="./img/eliminar.png" alt="eliminar" width="15px" height="15px">
             </button>
 
         `;
