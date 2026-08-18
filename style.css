@@ -73,6 +73,7 @@ p {
     width: 100%;
     height: 70rem;
     overflow: hidden;
+    position: relative;
 }
 
 .hero__image {
@@ -81,7 +82,21 @@ p {
     display: block;
     object-fit: cover;
     object-position: center;
+   
 }
+
+.hero-logo {   
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-60%, -30%); 
+    z-index: 10;
+
+}
+.hero-logo img{
+        width: 23rem;
+        height: 18rem;
+    }
 
 
 /* ==================================================
@@ -226,6 +241,7 @@ p {
     font-family: "BBH Bogle", sans-serif;
     font-size: 7rem;
 }
+
 .carousel-inner {
     padding: 0 6rem;
 }
@@ -334,10 +350,10 @@ p {
 
 .contenedor-news {
     width: min(80rem, 100%);
-    
+
     margin: 0 auto;
     padding: 2rem;
-   
+
     border-radius: 1rem;
     margin-bottom: 7rem;
 }
@@ -374,7 +390,7 @@ p {
 .contenedor-campos {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .campo {
@@ -739,7 +755,7 @@ p {
 
         column-gap: 1.5rem;
         margin-top: 12rem;
-        
+
     }
 
     .campo:nth-child(3) {
@@ -787,6 +803,10 @@ p {
 
     .hero {
         height: 45rem;
+    }
+    .hero-logo img{
+        width: 9rem;
+        height: 7rem;
     }
 
     #catalogo {
