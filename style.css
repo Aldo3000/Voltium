@@ -330,11 +330,13 @@ p {
 ================================================== */
 
 .contenedor-news {
-    width: min(60rem, 100%);
+    width: min(80rem, 100%);
+    
     margin: 0 auto;
     padding: 2rem;
-
+   
     border-radius: 1rem;
+    margin-bottom: 7rem;
 }
 
 .suscribe p {
@@ -343,7 +345,7 @@ p {
     color: var(--color-white);
 
     font-family: "Archivo", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 
     text-align: justify;
     line-height: 1.5;
@@ -355,7 +357,7 @@ p {
     color: var(--color-yellow);
 
     font-family: "BBH Bogle", sans-serif;
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 700;
 
     text-transform: uppercase;
@@ -391,7 +393,7 @@ p {
 }
 
 .input-text::placeholder {
-    color: var(--color-gray);
+    color: var(--color-white);
 }
 
 .boton {
@@ -722,9 +724,8 @@ p {
     .contenedor-news {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
 
-        column-gap: 1rem;
+        column-gap: 2rem;
     }
 
     .contenedor-campos {
