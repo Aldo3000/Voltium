@@ -190,6 +190,24 @@ p {
         0 0 3rem rgba(212, 255, 42, 0.6);
 }
 
+.custom-tooltip {
+    --bs-tooltip-bg: var(--color-yellow);
+    --bs-tooltip-color: var(--color-black);
+    --bs-tooltip-font-size: 1.4rem;
+    --bs-tooltip-padding-x: 1rem;
+    --bs-tooltip-padding-y: 0.6rem;
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+@media (max-width: 48rem) {
+    .tooltip {
+        display: none;
+    }
+}
 
 /* ==================================================
    PRODUCTOS
@@ -200,7 +218,7 @@ p {
     padding: 5rem;
 }
 
-#catalogo > h2 {
+#catalogo>h2 {
     margin: 5rem;
 
     color: var(--color-white);
@@ -769,7 +787,7 @@ p {
         padding: 2rem;
     }
 
-    #catalogo > h2 {
+    #catalogo>h2 {
         font-size: 3.5rem;
         margin: 2rem;
     }
@@ -840,7 +858,7 @@ p {
         padding: 5rem;
     }
 
-    #catalogo > h2 {
+    #catalogo>h2 {
         font-size: 7rem;
         margin: 5rem;
     }

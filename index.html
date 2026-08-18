@@ -27,22 +27,24 @@
     <nav class="floating-nav">
 
         <div class="nav-box single">
-            <button class="nav-btn cart-btn glow" id="btn-carrito" type="button" aria-label="Abrir carrito">
+            <button class="nav-btn cart-btn glow" id="btn-carrito" type="button" aria-label="Abrir carrito"
+                data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip"
+                data-bs-title="Carrito" data-bs-offset="0,8">
                 <img src="./img/cart-fill.svg" class="icon-img" alt="Carrito de compras">
-
-                <span class="badge" id="cart-count">
-                    0
-                </span>
+                <span class="badge" id="cart-count">0</span>
             </button>
         </div>
         <div class="nav-box pill">
-            <a href="#inicio" class="nav-btn glow">
+            <a href="#inicio" class="nav-btn glow" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-custom-class="custom-tooltip" data-bs-title="Inicio" data-bs-offset="0,8">
                 <img src="./img/logoIcon.png" class="icon-img" alt="Inicio">
             </a>
-            <a href="#catalogo" class="nav-btn glow">
+            <a href="#catalogo" class="nav-btn glow" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-custom-class="custom-tooltip" data-bs-title="Catálogo" data-bs-offset="0,8">
                 <img src="./img/Vector.png" class="icon-img" alt="Catálogo">
             </a>
-            <a href="#newsletters" class="nav-btn glow icons-btn">
+            <a href="#newsletters" class="nav-btn glow icons-btn" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-custom-class="custom-tooltip" data-bs-title="Suscríbete" data-bs-offset="0,8">
                 <img src="./img/envelope-fill.svg" class="icon-img" alt="Suscríbete">
             </a>
         </div>
@@ -402,7 +404,7 @@
                         <img src="./img/logoIcon.png" alt="Logo de Voltium" class="footer-logo mb-2">
 
                         <p class="mb-0 footer-slogan">
-                            Slogan
+                            Energía en cada paso
                         </p>
 
                     </div>
@@ -499,12 +501,12 @@
 
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
