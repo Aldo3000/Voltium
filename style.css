@@ -371,6 +371,7 @@ p {
 .contenedor-campos {
     display: flex;
     flex-direction: column;
+    
 }
 
 .campo {
@@ -734,7 +735,8 @@ p {
         grid-template-rows: auto auto;
 
         column-gap: 1.5rem;
-        margin-top: 1rem;
+        margin-top: 12rem;
+        
     }
 
     .campo:nth-child(3) {
