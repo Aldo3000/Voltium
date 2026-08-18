@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Voltium</title>
     <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,43 +27,65 @@
     <nav class="floating-nav">
 
         <div class="nav-box single">
-            <button class="nav-btn cart-btn glow" type="button">
-                <img
-                    src="./img/cart-fill.svg"
-                    class="icon-img"
-                    alt="Carrito de compras"
-                >
-                <span class="badge">3</span>
+            <button class="nav-btn cart-btn glow" id="btn-carrito" type="button" aria-label="Abrir carrito">
+                <img src="./img/cart-fill.svg" class="icon-img" alt="Carrito de compras">
+
+                <span class="badge" id="cart-count">
+                    0
+                </span>
             </button>
         </div>
         <div class="nav-box pill">
             <a href="#inicio" class="nav-btn glow">
-                <img
-                    src="./img/logoIcon.png"
-                    class="icon-img"
-                    alt="Inicio">
+                <img src="./img/logoIcon.png" class="icon-img" alt="Inicio">
             </a>
             <a href="#catalogo" class="nav-btn glow">
-                <img
-                    src="./img/Vector.png"
-                    class="icon-img"
-                    alt="Catálogo">
+                <img src="./img/Vector.png" class="icon-img" alt="Catálogo">
             </a>
             <a href="#newsletters" class="nav-btn glow icons-btn">
-                <img
-                    src="./img/envelope-fill.svg"
-                    class="icon-img"
-                    alt="Suscríbete">
+                <img src="./img/envelope-fill.svg" class="icon-img" alt="Suscríbete">
             </a>
         </div>
     </nav>
+
+    <!-- =========================
+     CARRITO
+========================== -->
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+        <div class="cart-panel__header">
+            <h2 class="cart-panel__title">
+                Tu carrito
+            </h2>
+            <button class="cart-panel__close" id="btn-cerrar-carrito" type="button" aria-label="Cerrar carrito">
+                ×
+            </button>
+        </div>
+
+        <div class="cart-panel__items" id="cart-items">
+            <!-- Los productos se generan con JavaScript -->
+        </div>
+
+        <div class="cart-panel__footer">
+            <div class="cart-total">
+                <span>
+                    Total
+                </span>
+                <span id="cart-total">
+                    $0
+                </span>
+            </div>
+            <button class="cart-checkout" id="btn-finalizar" type="button">
+                Finalizar compra
+            </button>
+        </div>
+    </aside>
     <!-- =========================
          HEADER / HERO
     ========================== -->
     <header class="hero" id="inicio">
-        <img
-            class="hero__image"
-            src="./img/Image20260817133824.jpg"
+        <img class="hero__image" src="./img/Image20260817133824.jpg"
             alt="Promoción de tenis deportivos Adidas Ultraboost con 15% de descuento">
     </header>
     <!-- =========================
@@ -87,11 +105,8 @@
                             <!-- Producto 1 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-                                    <img
-                                        src="./img/NIKE+AIR+MAX+PLUS+OG+PRM+1.avif"
-                                        class="card-img-top"
-                                        alt="Nike Air Max Scorpion"
-                                    >
+                                    <img src="./img/NIKE+AIR+MAX+PLUS+OG+PRM+1.avif" class="card-img-top"
+                                        alt="Nike Air Max Scorpion">
                                     <div class="card-body">
                                         <div class="card-precio">
                                             <h5 class="card-title archivo-semibold">
@@ -101,75 +116,58 @@
                                                 $4,199
                                             </p>
                                         </div>
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="1"
+                                            data-nombre='Nike Air Max "Scorpion"' data-precio="4199"
+                                            data-imagen="./img/NIKE+AIR+MAX+PLUS+OG+PRM+1.avif">
                                             Comprar
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
-
                             <!-- Producto 2 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-
-                                    <img
-                                        src="./img/AIR+FORCE+1+'07.avif"
-                                        class="card-img-top"
-                                        alt="Nike Air Force 1 '07"
-                                    >
-
+                                    <img src="./img/AIR+FORCE+1+'07.avif" class="card-img-top"
+                                        alt="Nike Air Force 1 '07">
                                     <div class="card-body">
-
                                         <div class="card-precio">
-
                                             <h5 class="card-title archivo-semibold">
                                                 Nike Air Force 1 '07
                                             </h5>
-
                                             <p class="card-text archivo-semibold">
                                                 $2,599
                                             </p>
 
                                         </div>
 
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="2"
+                                            data-nombre="Nike Air Force 1 '07" data-precio="2599"
+                                            data-imagen="./img/AIR+FORCE+1+'07.avif">
                                             Comprar
-                                        </a>
-
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
-
                             <!-- Producto 3 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-
-                                    <img
-                                        src="./img/NIKE+V5+RNR.avif"
-                                        class="card-img-top"
-                                        alt="Nike V5 RNR"
-                                    >
-
+                                    <img src="./img/NIKE+V5+RNR.avif" class="card-img-top" alt="Nike V5 RNR">
                                     <div class="card-body">
-
                                         <div class="card-precio">
-
                                             <h5 class="card-title archivo-semibold">
                                                 Nike V5 RNR
                                             </h5>
-
                                             <p class="card-text archivo-semibold">
                                                 $1,999
                                             </p>
-
                                         </div>
-
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="3"
+                                            data-nombre="Nike V5 RNR" data-precio="1999"
+                                            data-imagen="./img/NIKE+V5+RNR.avif">
                                             Comprar
-                                        </a>
-
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -177,110 +175,78 @@
                         </div>
                     </div>
 
-
                     <!-- Página 2 -->
                     <div class="carousel-item">
-
                         <div class="row justify-content-center">
-
                             <!-- Producto 4 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-
-                                    <img
-                                        src="./img/AIR+JORDAN+4+RETRO.avif"
-                                        class="card-img-top"
-                                        alt="Air Jordan 4 Retro Comic"
-                                    >
-
+                                    <img src="./img/AIR+JORDAN+4+RETRO.avif" class="card-img-top"
+                                        alt="Air Jordan 4 Retro Comic">
                                     <div class="card-body">
-
                                         <div class="card-precio">
-
                                             <h5 class="card-title archivo-semibold">
                                                 Air Jordan 4 Retro "Comic"
                                             </h5>
-
                                             <p class="card-text archivo-semibold">
                                                 $4,999
                                             </p>
-
                                         </div>
-
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="4"
+                                            data-nombre='Air Jordan 4 Retro "Comic"' data-precio="4999"
+                                            data-imagen="./img/AIR+JORDAN+4+RETRO.avif">
                                             Comprar
-                                        </a>
-
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
 
                             <!-- Producto 5 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-
-                                    <img
-                                        src="./img/AIR+MAX+DN8.avif"
-                                        class="card-img-top"
-                                        alt="Nike Air Max Dn8"
-                                    >
-
+                                    <img src="./img/AIR+MAX+DN8.avif" class="card-img-top" alt="Nike Air Max Dn8">
                                     <div class="card-body">
-
                                         <div class="card-precio">
-
                                             <h5 class="card-title archivo-semibold">
                                                 Nike Air Max Dn8
                                             </h5>
-
                                             <p class="card-text archivo-semibold">
                                                 $4,299
                                             </p>
-
                                         </div>
-
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="5"
+                                            data-nombre="Nike Air Max Dn8" data-precio="4299"
+                                            data-imagen="./img/AIR+MAX+DN8.avif">
                                             Comprar
-                                        </a>
+                                        </button>
 
                                     </div>
                                 </div>
                             </div>
-
 
                             <!-- Producto 6 -->
                             <div class="col-12 col-md-4">
                                 <div class="card">
-
-                                    <img
-                                        src="./img/NIKE+PACIFIC+LTR.avif"
-                                        class="card-img-top"
-                                        alt="Nike Pacific de cuero"
-                                    >
-
+                                    <img src="./img/NIKE+PACIFIC+LTR.avif" class="card-img-top"
+                                        alt="Nike Pacific de cuero">
                                     <div class="card-body">
-
                                         <div class="card-precio">
-
                                             <h5 class="card-title archivo-semibold">
                                                 Nike Pacific de cuero
                                             </h5>
-
                                             <p class="card-text archivo-semibold">
                                                 $1,799
                                             </p>
-
                                         </div>
-
-                                        <a href="#" class="btn btn-primary">
+                                        <button class="btn btn-primary btn-comprar" type="button" data-id="6"
+                                            data-nombre="Nike Pacific de cuero" data-precio="1799"
+                                            data-imagen="./img/NIKE+PACIFIC+LTR.avif">
                                             Comprar
-                                        </a>
+                                        </button>
 
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -288,16 +254,8 @@
 
 
                 <!-- Controles del carrusel -->
-                <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#cardCarousel"
-                    data-bs-slide="prev"
-                >
-                    <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                    ></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
                     <span class="visually-hidden">
                         Anterior
@@ -305,16 +263,8 @@
                 </button>
 
 
-                <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#cardCarousel"
-                    data-bs-slide="next"
-                >
-                    <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                    ></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
                     <span class="visually-hidden">
                         Siguiente
@@ -331,16 +281,9 @@
         ========================== -->
         <section class="promo-banner">
 
-            <img
-                class="promo-banner__image"
-                src="./img/bannerCTA.png"
-                alt="Promoción de tenis deportivos"
-            >
+            <img class="promo-banner__image" src="./img/bannerCTA.png" alt="Promoción de tenis deportivos">
 
-            <a
-                class="promo-banner__button"
-                href="#"
-            >
+            <a class="promo-banner__button" href="#">
                 Comprar ahora
             </a>
 
@@ -372,10 +315,7 @@
 
             <div class="promo-card__product">
 
-                <img
-                    src="./img/tenisalcuadrado.png"
-                    alt="Tenis Adidas Ultraboost Run"
-                >
+                <img src="./img/tenisalcuadrado.png" alt="Tenis Adidas Ultraboost Run">
 
             </div>
 
@@ -406,45 +346,25 @@
                 </div>
 
 
-                <form
-                    class="formulario"
-                    id="forms-news"
-                >
+                <form class="formulario" id="forms-news">
 
                     <fieldset>
 
                         <div class="contenedor-campos">
 
                             <div class="campo">
-                                <input
-                                    class="input-text"
-                                    type="text"
-                                    name="nombre"
-                                    id="nombre"
-                                    placeholder="Nombre"
-                                >
+                                <input class="input-text" type="text" name="nombre" id="nombre" placeholder="Nombre">
                             </div>
 
 
                             <div class="campo">
-                                <input
-                                    class="input-text"
-                                    type="text"
-                                    name="ciudad"
-                                    id="ciudad"
-                                    placeholder="Ciudad"
-                                >
+                                <input class="input-text" type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
                             </div>
 
 
                             <div class="campo">
-                                <input
-                                    class="input-text"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Correo electrónico"
-                                >
+                                <input class="input-text" type="email" name="email" id="email"
+                                    placeholder="Correo electrónico">
                             </div>
 
                         </div>
@@ -452,11 +372,7 @@
 
                         <div id="liveAlertPlaceholder">
 
-                            <button
-                                type="button"
-                                class="boton"
-                                id="liveAlertBtn"
-                            >
+                            <button type="button" class="boton" id="liveAlertBtn">
                                 Enviar
                             </button>
 
@@ -483,11 +399,7 @@
                     <!-- Logo -->
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start">
 
-                        <img
-                            src="./img/logoIcon.png"
-                            alt="Logo de Voltium"
-                            class="footer-logo mb-2"
-                        >
+                        <img src="./img/logoIcon.png" alt="Logo de Voltium" class="footer-logo mb-2">
 
                         <p class="mb-0 footer-slogan">
                             Energía en cada paso
@@ -516,28 +428,19 @@
                         <ul class="list-unstyled mb-0">
 
                             <li>
-                                <a
-                                    href="#inicio"
-                                    class="footer-link fw-bold"
-                                >
+                                <a href="#inicio" class="footer-link fw-bold">
                                     INICIO
                                 </a>
                             </li>
 
                             <li>
-                                <a
-                                    href="#catalogo"
-                                    class="footer-link fw-bold"
-                                >
+                                <a href="#catalogo" class="footer-link fw-bold">
                                     CATÁLOGO
                                 </a>
                             </li>
 
                             <li>
-                                <a
-                                    href="#newsletters"
-                                    class="footer-link fw-bold"
-                                >
+                                <a href="#newsletters" class="footer-link fw-bold">
                                     SUSCRÍBETE
                                 </a>
                             </li>
@@ -559,39 +462,18 @@
 
                         <div class="d-flex gap-2">
 
-                            <a
-                                href="#"
-                                class="social-icon"
-                            >
-                                <img
-                                    src="./img/facebook.svg"
-                                    alt="Facebook"
-                                    class="social-icon-img"
-                                >
+                            <a href="#" class="social-icon">
+                                <img src="./img/facebook.svg" alt="Facebook" class="social-icon-img">
                             </a>
 
 
-                            <a
-                                href="#"
-                                class="social-icon"
-                            >
-                                <img
-                                    src="./img/tiktok.svg"
-                                    alt="TikTok"
-                                    class="social-icon-img"
-                                >
+                            <a href="#" class="social-icon">
+                                <img src="./img/tiktok.svg" alt="TikTok" class="social-icon-img">
                             </a>
 
 
-                            <a
-                                href="#"
-                                class="social-icon"
-                            >
-                                <img
-                                    src="./img/twitter-x.svg"
-                                    alt="Twitter"
-                                    class="social-icon-img"
-                                >
+                            <a href="#" class="social-icon">
+                                <img src="./img/twitter-x.svg" alt="Twitter" class="social-icon-img">
                             </a>
 
                         </div>
@@ -619,11 +501,9 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"
-    ></script>
+        crossorigin="anonymous"></script>
 
 </body>
 
