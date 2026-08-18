@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Voltium</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -98,7 +99,7 @@
              PRODUCTOS
         ========================== -->
         <section class="container-fluid" id="catalogo">
-            <h2>Productos</h2>
+            <h2 data-aos="fade-up">Productos</h2>
             <div id="cardCarousel" class="carousel slide">
                 <div class="carousel-inner">
                     <!-- Página 1 -->
@@ -317,7 +318,8 @@
 
             <div class="promo-card__product">
 
-                <img src="./img/tenisalcuadrado.png" alt="Tenis Adidas Ultraboost Run">
+                <img data-aos="zoom-in-up" data-aos-duration="900" data-aos-easing="ease-out-bounce"
+                    data-aos-delay="200" src="./img/tenisalcuadrado.png" alt="Tenis Adidas Ultraboost Run">
 
             </div>
 
@@ -506,6 +508,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 
