@@ -119,7 +119,7 @@ p {
 
 .nav-box.pill {
     padding: 1.2rem 0.8rem;
-    gap: 1.4rem;
+    gap: 1.8rem;
 }
 
 .nav-btn {
@@ -179,10 +179,9 @@ p {
 .nav-btn.glow {
     background-color: var(--color-yellow);
     color: var(--color-black);
-
     box-shadow:
-        0 0 1rem rgba(212, 255, 42, 0.6),
-        0 0 2rem rgba(212, 255, 42, 0.4);
+        0 0 1rem rgba(212, 255, 42, 0.2),
+        0 0 2rem rgba(212, 255, 42, 0.2);
 }
 
 .nav-btn.glow:hover {
