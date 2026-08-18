@@ -64,6 +64,21 @@ p {
     font-family: "Archivo", sans-serif;
 }
 
+.btn-glow {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    box-shadow:
+        0 0 1rem rgba(212, 255, 42, 0.2),
+        0 0 2rem rgba(212, 255, 42, 0.2);
+}
+
+.btn-glow:hover {
+    box-shadow:
+        0 0 1.5rem rgba(212, 255, 42, 0.9),
+        0 0 3rem rgba(212, 255, 42, 0.6);
+    transition: transform 0.2s ease;
+    transform: scale(1.08);
+}
 
 /* ==================================================
    HERO / HEADER
@@ -82,21 +97,22 @@ p {
     display: block;
     object-fit: cover;
     object-position: center;
-   
+
 }
 
-.hero-logo {   
+.hero-logo {
     position: absolute;
     top: 40%;
     left: 20%;
-    transform: translate(-60%, -30%); 
+    transform: translate(-60%, -30%);
     z-index: 10;
 
 }
-.hero-logo img{
-        width: 23rem;
-        height: 18rem;
-    }
+
+.hero-logo img {
+    width: 23rem;
+    height: 18rem;
+}
 
 
 /* ==================================================
@@ -303,7 +319,8 @@ p {
     border-radius: 20rem;
 
     font-family: "Archivo", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .btn.btn-primary:hover {
@@ -328,7 +345,13 @@ p {
     border-radius: 50%;
 
     opacity: 1;
+
+    box-shadow:
+        0 0 1rem rgba(212, 255, 42, 0.2),
+        0 0 2rem rgba(212, 255, 42, 0.2);
 }
+
+
 
 .carousel-control-prev {
     left: 1.5rem;
@@ -359,7 +382,7 @@ p {
 }
 
 .suscribe p {
-    margin-bottom: 0;
+    margin-bottom: 5;
 
     color: var(--color-white);
 
@@ -385,6 +408,7 @@ p {
 .formulario fieldset {
     border: none;
     padding: 0;
+
 }
 
 .contenedor-campos {
@@ -400,7 +424,7 @@ p {
 .input-text {
     width: 100%;
 
-    padding: 1rem;
+    padding: 1.5rem;
 
     border: none;
     border-radius: 1.5rem;
@@ -410,6 +434,7 @@ p {
 
     font-family: "Archivo", sans-serif;
     font-size: 1.5rem;
+    background-color: var(--color-gray);
 }
 
 .input-text::placeholder {
@@ -804,7 +829,8 @@ p {
     .hero {
         height: 45rem;
     }
-    .hero-logo img{
+
+    .hero-logo img {
         width: 9rem;
         height: 7rem;
     }
@@ -1089,6 +1115,10 @@ p {
     width: 4rem;
     height: 4rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border: none;
     border-radius: 50%;
 
@@ -1097,7 +1127,6 @@ p {
 
     font-size: 3rem;
     line-height: 1;
-
     cursor: pointer;
 
     transition:
