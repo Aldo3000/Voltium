@@ -226,6 +226,9 @@ p {
     font-family: "BBH Bogle", sans-serif;
     font-size: 7rem;
 }
+.carousel-inner {
+    padding: 0 6rem;
+}
 
 .carousel-item.active {
     background-color: var(--color-dark);
@@ -792,6 +795,10 @@ p {
         margin: 2rem;
     }
 
+    .carousel-inner {
+        padding: 0 4.5rem;
+    }
+
     .card {
         max-width: 100%;
         margin: 2rem auto;
@@ -856,6 +863,7 @@ p {
 
     #catalogo {
         padding: 5rem;
+        padding-right: 12rem;
     }
 
     #catalogo>h2 {
